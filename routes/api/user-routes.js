@@ -1,4 +1,4 @@
-const router = require('express').Router;
+const router = require('express').Router();
 
 const {
   getAllUser,
@@ -21,7 +21,7 @@ router
   .put(updateUser)
   .delete(deleteUser);
 
-// /api/users/:userId/friends/:friendId
+/api/users/:userId/friends/:friendId
 router
   .route('/:userId/friends/:friendId')
   .post(createFriend)
