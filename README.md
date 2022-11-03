@@ -13,6 +13,7 @@
 
   ## Description 
   Webfeather is a social networking API that uses the npm package Mongoose in connection with MongoDB, a non-relational database.  The intended purpose of this application is to manage data belonging to users including but not limited to their friends, thoughts, and reactions.<br><a href="https://drive.google.com/file/d/1XRjQvdDU_smJbRflftDpahy6tScol4D2/view?usp=sharing">Walkthrough Video Link</a><br>
+  N.B.: Application in-progress
   
   ## Installation 
   <br>1. MongoDB 6.0 (Please refer to https://www.mongodb.com/docs/manual/installation/ for instructions.)<br>2. Node.js (npm init)<br>3. npm i express@4.18.2<br>4. npm i mongoose@6.7.0<br>5. npm install --save-dev nodemon@2.0.20
