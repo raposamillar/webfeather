@@ -12,7 +12,7 @@
   - [License](#license)
 
   ## Description 
-  Webfeather is a social networking API that uses the npm package Mongoose in connection with MongoDB, a non-relational database.  The intended purpose of this application is to manage data belonging to users including but not limited to their friends, thoughts, and reactions.<br><a href="https://drive.google.com/file/d/1tplmQPiOuV2IhmjKM3bislfSpC2_3l5T/view?usp=sharing">Walkthrough Video Link</a><br>
+  Webfeather is a social networking API that uses the npm package Mongoose in connection with MongoDB, a non-relational database.  The intended purpose of this application is to manage data belonging to users including but not limited to their friends, thoughts, and reactions.<br><a href="https://drive.google.com/file/d/1M5VSBXWXOF80EcPO0lIS6uxpvW0YB9UV/view?usp=sharing">Walkthrough Video Link</a><br>
   N.B.: Application in-progress
   
   ## Installation 
