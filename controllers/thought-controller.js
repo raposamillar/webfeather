@@ -1,6 +1,7 @@
 const { Thought, User } = require('../models');
 
 const thoughtController = {
+  
   // add thought to user
   addThought({ params, body }, res) {
     console.log(body);
@@ -14,7 +15,7 @@ const thoughtController = {
       })
       .then(dbUserData => {
         if (!dbUserData) {
-          res.status(404).json({ message: 'No user with this id was found. '});
+          res.status(404).json({ message: 'No user with this id was found.' });
           return;
         }
         res.json(dbUserData);
@@ -38,12 +39,22 @@ const thoughtController = {
       .catch(err => res.json(err));
   },
 
+  // update thought
+  updateThought({ params }, res) {
+    Thought.findOneAndUpdate({ _id: params.thoughtId }, {
+      $addToSet: { 
+        thoughts: params.thoughtId
+      }
+    }, { new: true })
+    .then(data => res.json(data))
+  },
+
   // remove thought
   removeThought({ params }, res) {
     Thought.findOneAndDelete({ _id: params.thoughtId })
       .then(deletedThought => {
         if (!deletedThought) {
-          return res.status(404).json({ message: 'No thought with this id was found. '})
+          return res.status(404).json({ message: 'No thought with this id was found.' })
         }
         return Thought.findOneAndUpdate(
           { _id: params.thoughtId },
@@ -53,7 +64,7 @@ const thoughtController = {
       })
       .then(dbUserData => {
         if (!dbUserData) {
-          res.status(404).json({ message: 'No user with this id was found. '});
+          res.status(404).json({ message: 'No user with this id was found.' });
           return;
         }
         res.json(dbUserData);
